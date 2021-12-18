@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        main {
+            width: 100vw;
+        }
+
+        nav {
+            background-color: #0e0d0d;
+            width: 100vw;
+            height: 103px;
+            /* position: absolute; */
+        }
+
+        header {
+            width: 100vw;
+        }
+
+        ul {
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content: space-between;
+            /* margin: 3px */
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        #iconimage {
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            height: 40px;
+        }
+
+        ul div {
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        div li {
+            list-style: none;
+            padding: 10px;
+            color: white;
+        }
+
+        .navbar {
+            align-items: center;
+        }
+
+        #nav2 {
+            margin-right: 300px;
+        }
+
+        #nav1 {
+            margin-left: 150px;
+        }
+
+        #nav3 {
+            margin-right: 100px;
+        }
+
+        .image {
+            /* border: 2px solid black; */
+        }
+
+        .sidecontent {
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 2px solid black; */
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            background-color: #0e0d0d;
+        }
+
+        .imageman1 {
+            height: 500px;
+            width: 325px;
+            /* border: 2px solid black; */
+            margin-left: 210px;
+        }
+
+        .imagediv {
+            width: 50vw;
+            z-index: 9;
+        }
+
+        .rotatediv {
+            height: 502px;
+            width: 435px;
+            position: absolute;
+            background-color: black;
+            margin-left: -200px;
+            height: 800px;
+            width: 435px;
+            transform: rotateZ(-28deg);
+        }
+
+        .slantleft {
+            height: 20px;
+            width: 75vw;
+            /* border: 2px solid black; */
+            transform: skewY(-5deg);
+            margin-top: -40px;
+            padding-bottom: 150px;
+            background-color: white;
+            z-index: 10;
+        }
+
+        .slantright {
+            height: 20px;
+            width: 25vw;
+            /* border: 2px solid black; */
+            transform: skewY(15deg);
+            margin-top: -40px;
+            padding-bottom: 150px;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .slantdiv {
+            display: flex;
+            width: 100vw;
+            background-color: black
+        }
+
+        .container2 {
+            height: 550px;
+            position: relative;
+            margin-top: -62px;
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            z-index: 11;
+            background-color: white;
+            width: 100vw;
+            /* border: 2px solid black; */
+        }
+
+        .imagediv2 {
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid black; */
+        }
+
+        .sidecontent2 {
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            /* text-align: center; */
+            /* border: 2px solid black; */
+        }
+
+        .imageman2 {
+            height: 400px;
+            padding-left: 70px;
+        }
+
+        .sidecontent2 h3 {
+            padding-top: 20px;
+        }
+
+        .sidecontent2 p {
+            padding-top: 16px;
+        }
+
+        .subheading2 {
+            line-height: 30px;
+        }
+
+        .para {
+            padding-right: 200px;
+        }
+
+        .para2 {
+            margin-bottom: 20px;
+            padding-right: 200px;
+            padding-bottom: 20px;
+        }
+
+        #heading1 {
+            font-size: 50px;
+            padding-bottom: 30px;
+            padding-right: 175px;
+            color: white;
+        }
+
+        .btn1 {
+            width: 150px;
+            margin-bottom: 40px;
+            padding: 13px;
+            color: white;
+            background-color: #0e0d0d;
+            border: 2px solid rgba(61, 207, 211, 255);
+        }
+
+        .para1 {
+            padding-right: 200px;
+            padding-bottom: 30px;
+            color: white;
+        }
+
+        .subheading1 {
+            padding-bottom: 15px;
+            color: rgba(61, 207, 211, 255);
+
+        }
+
+        li button {
+            padding: 8px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgba(61, 207, 211, 255);
+        }
+
+        .designer {
+            color: rgba(61, 207, 211, 255);
+        }
+
+        #me {
+            color: rgba(61, 207, 211, 255);
+        }
+
+        .container3 {
+            width: 100vw;
+            height: 115vh;
+            /* border: 2px solid black; */
+            background-color: #f6f6f6;
+        }
+
+        .textdiv {
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            line-height: 37px;
+            margin-top: 50px;
+            /* border: 2px solid black; */
+        }
+
+        .cardsdiv {
+            width: 100vw;
+            height: 80vh;
+            padding-left: 15vw;
+            padding-right: 10vw;
+            /* border: 2px solid black; */
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 40px;
+        }
+
+        .card {
+            width: 300px;
+            height: 180px;
+            /* border: 2px solid black; */
+            display: flex;
+            margin-right: 15px;
+            margin-top: 40px;
+            background-color: white;
+        }
+
+        .subcard {
+            height: 55px;
+            width: 60px;
+            /* border: 2px solid; */
+            margin-left: 118px;
+            margin-top: -30px;
+            background-color: rgba(61, 207, 211, 255);
+        }
+
+        .subimage1 {
+            width: 40px;
+            height: 40px;
+            padding-left: 10px;
+            padding-top: 6px;
+        }
+
+        .text {
+            position: absolute;
+        }
+
+        .heading3 {
+            margin-top: 40px;
+            margin-left: 82px;
+            margin-bottom: 15px;
+            margin-top: 50px;
+        }
+
+        .para3 {
+            width: 250px;
+            text-align: center;
+            font-size: 13px;
+            padding-left: 20px;
+        }
+
+        #webdesign {
+            margin-left: 100px;
+        }
+
+        #app {
+            margin-left: 125px;
+        }
+
+        #card-1 {
+            background-color: #0e0d0d;
+            color: white;
+        }
+
+        .container4 {
+            /* border: 2px solid black; */
+        }
+
+        .subcontainer {
+            height: 70vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #0e0d0d;
+        }
+
+        .text4 {
+            /* border: 2px solid black; */
+            padding: 20px;
+            color: white;
+            padding-bottom: 40px;
+            padding-top: 50px;
+        }
+
+        .para4 {
+            line-height: 40px;
+            padding-left: 35px;
+        }
+
+        #btn4 {
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgba(61, 207, 211, 255);
+            margin-bottom: 150px;
+        }
+
+        .heading4 {
+            font-size: 40px;
+        }
+
+        .subcontainer2 {
+            height: 70vh;
+            width: 100vw;
+            /* border: 2px solid red; */
+            padding-top: 40px;
+            padding-left: 200px;
+            padding-right: 200px;
+            /* padding-bottom: 200px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            /* position: absolute */
+        }
+
+        .slantdiv2 {
+            display: flex;
+            width: 100vw;
+            /* border: 2px solid black; */
+            background-color: black;
+            height: 0px;
+        }
+
+        .slantleft2 {
+            height: 20px;
+            width: 75vw;
+            /* border: 2px solid black; */
+            transform: skewY(-5deg);
+            margin-top: -60px;
+            padding-bottom: 105px;
+            background-color: white;
+            z-index: 10;
+        }
+
+        .slantright2 {
+            height: 20px;
+            width: 25vw;
+            /* border: 2px solid black; */
+            transform: skewY(15deg);
+            margin-top: -60px;
+            padding-bottom: 105px;
+            background-color: white;
+            z-index: 1;
+        }
+
+        #our {
+            color: rgba(61, 207, 211, 255);
+        }
+
+        #textpara4 {
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-bottom: 10px;
+        }
+        #subheading4{
+            padding-bottom: 10px;
+        }
+        #subpara4{
+            padding-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .container5 {
+            height: 110vh;
+            width: 100vw;
+            background-color: whitesmoke;
+            /* border: 2px solid rgb(79, 15, 131); */
+        }
+
+        .textdiv5 {
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            flex-direction: column;
+            padding: 50px;
+            height: 150px;
+            line-height: 10px;
+        }
+
+        .bold {
+            margin-bottom: 60px;
+        }
+
+        .Image5 {
+            height: 200px;
+            width: 300px;
+            margin: 5px;
+            box-sizing: border-box;
+        }
+
+        .carddiv5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 72vw;
+            margin-left: 190px;
+            /* border: 2px solid black; */
+            height: 73vh;
+            box-sizing: border-box;
+        }
+
+        .imagediv-1 {
+            margin-top: 15px;
+        }
+
+        .imagediv-2 {
+            margin-bottom: 15px;
+        }
+
+        .carddiv6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 72vw;
+            margin-left: 190px;
+            /* border: 2px solid black; */
+            height: 75vh;
+            box-sizing: border-box;
+            /* margin-bottom: 20px; */
+        }
+
+        .container6 {
+            width: 100vw;
+            height: 130vh;
+            /* border: 2px solid blue; */
+            background-color: #0e0d0d;
+        }
+
+        .subcard-6 {
+            width: 304px;
+            height: 500px;
+            /* border: 2px solid firebrick; */
+            background-color: white;
+        }
+
+        .img-6 {
+            width: 300px;
+            height: 240px;
+            margin-bottom: 10px;
+        }
+
+        .subpara-6 {
+            line-height: 35px;
+        }
+
+        .para-6 {
+            margin-bottom: 10px;
+        }
+
+        #blue-6 {
+            color: rgba(61, 207, 211, 255);
+            ;
+        }
+
+        #heading-6 {
+            color: white
+        }
+
+        #para6 {
+            color: white;
+        }
+
+        .textdiv-6 {
+            padding-left: 10px;
+            font-size: 13px;
+        }
+
+        .container7 {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .subicondiv img {
+            height: 70px;
+            /* width: 70px; */
+            padding-bottom: 15px;
+            /* border: 2px solid red; */
+        }
+
+        .icondiv7 {
+            height: 150px;
+            width: 80vw;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 128px;
+        }
+
+        .subicondiv {
+            height: 150px;
+            width: 300px;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .subheading7 {
+            line-height: 25px;
+        }
+
+        .foldedimg {
+            width: 100px;
+        }
+
+        .message {
+            width: 60px;
+        }
+
+        .formdiv {
+            display: flex;
+            height: 350px;
+            width: 90vw;
+            /* border: 2px solid black; */
+            margin-top: 30px;
+            margin-left: 70px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .inputform {
+            height: 40px;
+            width: 80vw;
+            /* border: 2px solid rgb(63, 59, 59); */
+            margin: 5px;
+            border-radius: 4px;
+        }
+
+        #form1 {
+            width: 40vw;
+        }
+
+        #form2 {
+            width: 39vw;
+        }
+
+        #form4 {
+            height: 90px;
+            margin-bottom: 30px;
+        }
+
+        #btnform {
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgba(61, 207, 211, 255);
+            margin-bottom: 10px;
+        }
+
+        ::placeholder {
+            padding-left: 10px;
+        }
+
+        footer {
+            height: 30vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            margin-top: 120px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            /* align-items: center; */
+            flex-direction: column;
+            background-color: #0e0d0d;
+        }
+
+        .logo8 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        .icon8 {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        #iconimage8{
+            margin-right: 5px;
+        }
+
+        .textdiv5 span {
+            color: rgba(61, 207, 211, 255);
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="navbar" id="nav1">
+                    <li id="icn"><img id="iconimage" src="Images/logo.svg" alt="Error"></li>
+                    <li id="icntxt">Coders</li>
+                </div>
+                <div class="navbar" id="nav2">
+                    <li><a href="#container-1">Home</a></li>
+                    <li><a href="#container-2">About</a></li>
+                    <li><a href="#container-3">Services</a></li>
+                    <li><a href="#container-4">Clients</a></li>
+                    <li><a href="#container-5">Work</a></li>
+                    <li><a href="#container-6">Blog</a></li>
+                </div>
+                <div class="navbar" id="nav3">
+                    <li><a href="#container-7"><button>Contact</button></a></li>
+                </div>
+
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="container" id="containerid">
+            <div class="imagediv" id="imagediv1"><img class="imageman1" id="image-man" src="Images/man.png" alt="Error">
+            </div>
+            <div class="rotatediv" id="rotatediv1"></div>
+            <div class="sidecontent" id="sidecontent1">
+                <h3 class="subheading1">Johnathon Vics</h3>
+                <h1 id="heading1">I'm a Creative <span class="designer">Designer</span></h1>
+                <p class="para1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                    dolor labore quaerat, quidem esse tempora ipsa in quisquam unde ea natus consequuntur, blanditiis
+                    deleniti delectus minus, perferendis animi reprehenderit aliquam.
+                </p>
+                <button class="btn1">DOWNLOAD CV</button>
+            </div>
+        </div>
+        <div class="slantdiv">
+            <div class="slantleft"></div>
+            <div class="slantright"></div>
+        </div>
+        <div class="container2" id="container-2">
+            <div class="imagediv2" id="imagediv-2"><img class="imageman2" id="imageman-2" src="Images/man-2.png"
+                    alt="Error"></div>
+            <div class="sidecontent2" id="sidecontent-2">
+                <h2 class="heading2">About <span id="me">Me</span></h2>
+                <h3 class="subheading2">Hello I'm Jonathon Vics</h3>
+                <p class="para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla natus non nihil maiores vero aliquam
+                    doloribus pariatur perspiciatis neque temporibus fuga recusandae amet, ipsam et saepe minima eos
+                    nobis placeat dicta debitis excepturi! Delectus magnam velit fugit hic similique animi, eligendi
+                    alias soluta iste, harum facilis, perspiciatis enim aut ducimus inventore placeat unde atque
+                    suscipit consequatur possimus quis aperiam nihil.
+                </p>
+                <p class="para2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias asperiores similique minus officia!
+                    Explicabo omnis magni suscipit corrupti?
+                </p>
+                <div class="icon"><img src="Icons/insta.png" alt="Error">
+                    <img src="Icons/fb.png" alt="Error">
+                    <img src="Icons/tw.svg" alt="Error">
+                    <img src="Icons/pin.svg" alt="Error">
+                    <img src="Icons/1492718767-g_83601 (2).png" alt="Error">
+                </div>
+            </div>
+        </div>
+        <div class="container3" id="container-3">
+            <div class="textdiv">
+                <h2><span>Our</span>Services</h2>
+                <p>We provide high standard clean websites for your buisness solutions</p>
+            </div>
+            <div class="cardsdiv">
+                <div class="card" id="card-1">
+                    <div class="subcard" id="subcard-1">
+                        <img class="subimage1" src="Icons/paintbrush_83820.svg" alt="Error">
+                    </div>
+                    <div class="text" id="text-1">
+                        <h3 class="heading3">Graphic Design</h3>
+                        <p class="para3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eius ipsam
+                            culpa sapiente hghe jupe odwd nwie. </p>
+                    </div>
+                </div>
+                <div class="card" id="card-2">
+                    <div class="subcard" id="subcard-2">
+                        <img class="subimage1" src="Icons/code_icon-icons.com_73620.svg" alt="Error">
+                    </div>
+                    <div class="text" id="text-2">
+                        <h3 class="heading3">Web Development</h3>
+                        <p class="para3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eius ipsam
+                            culpa sapiente nvit jsda vcha bdcv. </p>
+                    </div>
+                </div>
+                <div class="card" id="card-3">
+                    <div class="subcard" id="subcard-3">
+                        <img class="subimage1" src="Icons/2799208-bag-business_99786.svg" alt="Error">
+                    </div>
+                    <div class="text" id="text-3">
+                        <h3 class="heading3">Media Marketing</h3>
+                        <p class="para3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eius ipsam
+                            culpa sapiente roin nigreni ngrn.</p>
+                    </div>
+                </div>
+                <div class="card" id="card-4">
+                    <div class="subcard" id="subcard-4">
+                        <img class="subimage1" src="Icons/television.png" alt="Error">
+                    </div>
+                    <div class="text" id="text-4">
+                        <h3 class="heading3" id="webdesign">Web Design</h3>
+                        <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate provident
+                            inventore obcaecati vel fugit iusto eum sint.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="card-5">
+                    <div class="subcard" id="subcard-5">
+                        <img class="subimage1" src="Icons/film_icon_178391.svg" alt="Error">
+                    </div>
+                    <div class="text" id="text-5">
+                        <h3 class="heading3">Motion Graphics</h3>
+                        <p class="para3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eius ipsam
+                            culpa sapiente mifg vind xim gsda. </p>
+                    </div>
+                </div>
+                <div class="card" id="card-6">
+                    <div class="subcard" id="subcard-6">
+                        <img class="subimage1" src="Icons/mobilephone_79875.svg" alt="Error">
+                    </div>
+                    <div class="text" id="text-6">
+                        <h3 class="heading3" id="app">Apps</h3>
+                        <p class="para3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum eius ipsam
+                            culpa sapiente nuiv occm iecmw nscni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4" id="container-4">
+            <div class="subcontainer">
+                <div class="text4">
+                    <h1 class="heading4">I Am Available For Freelancer</h1>
+                    <p class="para4">We provide high standard clean websites for your buisness solutions</p>
+                </div>
+                <button id="btn4">Download CV</button>
+            </div>
+            <div class="slantdiv2">
+                <div class="slantleft2"></div>
+                <div class="slantright2"></div>
+            </div>
+            <div class="subcontainer2">
+                <h2 id="subheading4"><span id="our">Our</span> Clients</h2>
+                <p id="subpara4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, dolores!</p>
+                <img id="image4" src="Images/lady.png" alt="Error">
+                <p id="textpara4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eum recusandae tenetur
+                    ut libero maiores corrupti, facere illum praesentium distinctio odio harum aut dicta ullam sint
+                    dolores beatae nostrum, numquam nihil amet, minima eveniet eius vitae quo. Dolorum dignissimos,
+                    voluptas vitae adipisci ut odio natus aperiam reprehenderit quod assumenda hic veritatis? Fugit,
+                    rerum incidunt modi, autem dolorem quod placeat quaerat error et ipsum id? Molestiae sunt corporis
+                    eius molestias.</p>
+                <p class="bold"> <b> - John Deol,Company ABC</b></p>
+            </div>
+        </div>
+        <div class="container5" id="container-5">
+            <div class="textdiv5">
+                <h2><span>Our</span> Works</h2>
+                <p>We provide high standard clean websites for your buisness solutions</p>
+            </div>
+            <div class="carddiv5">
+                <div class="imagediv-1">
+                    <img class="Image5" src="Images/ph-1.png" alt="Error">
+                    <img class="Image5" src="Images/ph-2.png" alt="Error">
+                    <img class="Image5" src="Images/ph-3.png" alt="Error">
+                </div>
+                <div class="imagediv-2">
+                    <img class="Image5" src="Images/jessica-lewis-Ck9cig5YSn4-unsplash.jpg" alt="Error">
+                    <img class="Image5" src="Images/maxim-ilyahov-0aRycsfH57A-unsplash.jpg" alt="Error">
+                    <img class="Image5" src="Images/hillary-black-NRVXglVPxKg-unsplash.jpg" alt="Error">
+                </div>
+            </div>
+        </div>
+        <div class="container6" id="container-6">
+            <div class="textdiv5">
+                <h2 id="heading-6"><span id="blue-6">Our</span> Blogs</h2>
+                <p id="para6">We provide high standard clean websites for your buisness solutions</p>
+            </div>
+            <div class="carddiv6">
+                <div class="subcard-6">
+                    <img class="img-6" src="Images/article-ph-1.png" alt="Error">
+                    <div class="textdiv-6">
+                        <h3 class="subheading-6">Occusamus et lusto adio</h3>
+                        <p class="subpara-6">May 13,2017</p>
+                        <p class="para-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iste dolor,
+                            recusandae dolorem veniam provident magni fugiat sequi vero voluptatibus rerum sit ullam
+                            corrupti tenetur vel obcaecati sed neque inventore eaque minima.</p>
+                        <h4>Read More</h4>
+                    </div>
+                </div>
+                <div class="subcard-6">
+                    <img class="img-6" src="Images/article-ph-2.png" alt="Error">
+                    <div class="textdiv-6">
+                        <h3 class="subheading-6">Occusamus et lusto adio</h3>
+                        <p class="subpara-6">May 13,2017</p>
+                        <p class="para-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iste dolor,
+                            recusandae dolorem veniam provident magni fugiat sequi vero voluptatibus rerum sit ullam
+                            corrupti tenetur vel obcaecati sed neque inventore eaque minima.</p>
+                        <h4>Read More</h4>
+                    </div>
+                </div>
+                <div class="subcard-6">
+                    <img class="img-6" src="Images/article-ph-3.png" alt="Error">
+                    <div class="textdiv-6">
+                        <h3 class="subheading-6">Occusamus et lusto adio</h3>
+                        <p class="subpara-6">May 13,2017</p>
+                        <p class="para-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iste dolor,
+                            recusandae dolorem veniam provident magni fugiat sequi vero voluptatibus rerum sit ullam
+                            corrupti tenetur vel obcaecati sed neque inventore eaque minima.</p>
+                        <h4>Read More</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slantdiv2">
+            <div class="slantleft2"></div>
+            <div class="slantright2"></div>
+        </div>
+        <div class="container7" id="container-7">
+            <div class="textdiv5">
+                <h2>Contact <span id="blue-6">Us</span></h2>
+                <p>We provide high standard clean websites for your buisness solutions</p>
+            </div>
+            <div class="icondiv7">
+                <div class="subicondiv">
+                    <img src="Icons/mobilephone_79875.svg" alt="Error">
+                    <h3 class="subheading7">Call Us On</h3>
+                    <p>+965 423 6421</p>
+                </div>
+                <div class="subicondiv">
+                    <img class="message" src="Images/messagemail_mensaje_4810 (1).png" alt="Error">
+                    <h3 class="subheading7">Email Us On</h3>
+                    <p>support@companyname.com</p>
+                </div>
+                <div class="subicondiv">
+                    <img class="foldedimg" src="Images/map-folded-paper-of-three-parts-outline_icon-icons.com_56715.svg"
+                        alt="Error">
+                    <h3 class="subheading7">Visit Office</h3>
+                    <p>99 s.t Jambia Pekanbanu 282922 Indonasia</p>
+                </div>
+            </div>
+            <div class="formdiv">
+                <form action="Submit">
+                    <input class="inputform" id="form1" type="text" placeholder="Your Name">
+                    <input class="inputform" id="form2" type="email" placeholder="Your Email">
+                    <input class="inputform" id="form3" type="text" placeholder="Your Subject">
+                    <input class="inputform" id="form4" class="form-4" type="textarea" placeholder="Your Message">
+                    <button id="btnform">Download CV</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="logo8">
+            <img id="iconimage8" src="Images/logo.svg" alt="Error">
+            <p>Logo</p>
+        </div>
+        <div class="icon8">
+            <img src="Icons/insta.png" alt="Error">
+            <img src="Icons/fb.png" alt="Error">
+            <img src="Icons/pin.svg" alt="Error">
+            <img src="Icons/1492718755-whatsapp_83610.png" alt="Error">
+        </div>
+        <p>copyright@harsh private limited</p>
+    </footer>
+</body>
+
+</html>
